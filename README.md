@@ -20,3 +20,16 @@ if a.info[0]:
   print("This token is valid.")
   print(f"Username: {a.info[1]}#{a.info[2]}") # Output: Username: username#0001
 ```
+
+Futhermore, you can send messages.
+
+```py
+a.message(1234567890000, "Sent using pandacord!") # returns [response.status_code, response.json()]
+```
+Output:
+![image](https://github.com/user-attachments/assets/1d74fbec-7330-4ae9-b240-b3ab259f4594)
+
+It sents the message using requests. Additionally, proxies may be added with:
+```py
+a.message(1234567890000, "Sent using pandacord!", {"http": "http://1.1.1.1"}) # returns [response.status_code, response.json()]
+```
