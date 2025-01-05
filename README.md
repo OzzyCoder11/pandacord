@@ -7,10 +7,11 @@ Firstly, you can add a token by using a class. Below is an example.
 ```py
 import pandacord
 
-a = Token("Your Token Here")
+a = Token("Your Token Here") # lets say this is a working vaild token
 
-a.validate() # all values saved to a.info
+a.validate() # all values saved to a.info. this also returns [True, <username>, <discriminator>, <userid>]
 
-if a.info[1]:
+if a.info[0]:
   print("This token is valid.")
+  print(f"Username: {a.info[1]}#{a.info[2]}") # Output: Username: username#0001
 ```
