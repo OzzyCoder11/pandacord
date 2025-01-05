@@ -5,5 +5,12 @@ This is a new Python PyPI package that uses Discord's API to send messages, veri
 Firstly, you can add a token by using a class. Below is an example.
 
 ```py
-print("")
+import pandacord
+
+a = Token("Your Token Here")
+
+a.validate() # all values saved to a.info
+
+if a.info[1]:
+  print("This token is valid.")
 ```
