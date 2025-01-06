@@ -33,3 +33,16 @@ It sents the message using requests. Additionally, proxies may be added with:
 ```py
 a.message(1234567890000, "Sent using pandacord!", {"http": "http://1.1.1.1"}) # returns [response.status_code, response.json()]
 ```
+
+Introduced in version 2.0.0, you can now use webhooks in an advanced way. Here is an example:
+
+```py
+import pandacord as pc
+
+a = pc.Webhook("https://discord.com/api/webhooks/1234567890/1234567890") # pretent this is a valid webhook
+
+# to send a message, you must use the send function
+
+a.send(content="Sent with pandacord Webhooks!")
+```
+Output: ![image](https://github.com/user-attachments/assets/2d4f96e0-b008-47ff-89fc-ec55b1d91fb5)
