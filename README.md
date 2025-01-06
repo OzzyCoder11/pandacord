@@ -46,3 +46,37 @@ a = pc.Webhook("https://discord.com/api/webhooks/1234567890/1234567890") # prete
 a.send(content="Sent with pandacord Webhooks!")
 ```
 Output: ![image](https://github.com/user-attachments/assets/2d4f96e0-b008-47ff-89fc-ec55b1d91fb5)
+
+To use webhook in an advanced way, you can add embeds. Unfortunately, these are very simple embeds. But here is an expample:
+
+```py
+a.send_embed(
+    title="Pandacord!",
+    description="This is sent with Pandacord!",
+    color=0x00ff00
+)
+```
+Output: ![image](https://github.com/user-attachments/assets/8d50df7a-62d0-4459-ae5e-8f329a9c6258)
+
+Something smaller, you can see if the user is connected to the internet with:
+
+```py
+import pandacord as pc
+import sys
+
+if pc.other.test_wifi():
+  do_something()
+else:
+  sys.exit()
+```
+
+Finally for 2.0.0, you can get infomation from invites. Here is an example:
+
+```py
+import pandacord as pc
+
+a = pc.Invite("tiktok") # you must not add discord.gg/ | im using tiktok as an example
+
+print(a.get_info()[1].get('guild').get('name')) # Output: TikTok
+print(a.get_info()[1].get('guild').get('id'))   # Output: 893568518853914664
+```
