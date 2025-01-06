@@ -10,9 +10,9 @@ pip install pandacord
 Next, you can add a token by using a class. Below is an example.
 
 ```py
-import pandacord
+import pandacord as pc
 
-a = Token("Your Token Here") # lets say this is a working vaild token
+a = pc.Token("Your Token Here") # lets say this is a working vaild token
 
 a.validate() # all values saved to a.info. this also returns [True, <username>, <discriminator>, <userid>]
 
